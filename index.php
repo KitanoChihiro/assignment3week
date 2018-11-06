@@ -13,9 +13,7 @@
         <div>
             <p class="topic">こんにちはゲストさん</p>
             <br>
-            <p class="topic">2018年11月の日記</p>
-            <p class="topic">2018年10月の日記</p>
-            <p class="topic">2018年9月の日記</p>
+            <a href=""><p class="topic">2018年11月の日記</p></a>
         </div>
 
         <div class="box">

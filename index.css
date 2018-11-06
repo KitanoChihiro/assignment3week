@@ -7,7 +7,8 @@
 .header-logo{
     padding: 20px;
     text-align:center;
-    font-size: 30px;
+    font-size: 40px;
+    color: #FBE545;
 }
 
 .topic{
@@ -16,12 +17,12 @@
     width: 160px;
 }
 
-.diary{
+.box{
     margin-left: auto;
     width: 1500px;
     height: 200px;
     border: 1px solid;
-    font-size: 40px;
+    
 }
 
 
@@ -33,4 +34,5 @@
 .footer-logo{
     padding: 20px;
     text-align:center;
+    color: #FBE545;
 }

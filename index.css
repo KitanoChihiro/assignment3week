@@ -12,14 +12,14 @@
 }
 
 .topic{
-    padding-left: 40px;
+    padding-left: 80px;
     border-bottom: 1px solid #4DB7EB;
-    width: 160px;
+    width: 200px;
 }
 
 .box{
     margin-left: auto;
-    width: 1500px;
+    width: 1400px;
     height: 200px;
     border: 1px solid;
     

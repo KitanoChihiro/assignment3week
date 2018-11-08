@@ -1,0 +1,93 @@
+.header{
+    position: fixed;    /* ヘッダーを固定する */
+    top: 0;             /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* ヘッダーの横幅を指定する */
+    height: 80px;       /* ヘッダーの高さを指定する */
+    padding: 10px;      /* ヘッダーの余白を指定する(上下左右) */
+    color: #000000;     /* フォントの色を指定する */
+    background-color: #cc6699;
+}
+
+.header-logo{
+    padding-bottom: 10px;
+    text-align:center;
+    font-size: 40px;
+    color: #FBE545;
+}
+
+.field{
+    display: table-cell;
+    border-color: #FFCCCC;
+    background-color: #FFCCCC;
+}
+
+.text{
+    font-size: 20px;
+    width: 1000px;
+    height: 50px;
+}
+
+.textarea{
+    font-size: 20px;
+    width: 1000px;
+    height: 200px
+}
+
+.form{
+    width: 60%;
+    margin-left: 350px;
+    margin-top: 230px;
+    top:100px;
+    border: 1px #FBE545;
+}
+
+
+
+.btn{
+    margin-top: 30px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#ffcc99 0%, #ffcc99 100%);
+    background-image: linear-gradient(#f09199 0%, #ffcc99 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
+.btn:active{/*押したとき*/
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);/*沈むように*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffbcbc 100%);
+    background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);/*グラデーションを明るく*/
+}
+
+
+
+.footer{
+    position: fixed;    /* フッターを固定する */
+    bottom: 0;          /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* フッターの横幅を指定する */
+    padding:10px;       /* フッター内側の余白を指定する(上下左右) */
+    color: #FFFFFF;     /* フッターのフォントの色を指定する */
+    background-color: #cc6699;
+    height: 40px;
+}
+
+.footer-logo{
+    padding-bottom: 20px;
+    text-align:center;
+    color: #FBE545;
+}

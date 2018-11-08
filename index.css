@@ -1,7 +1,13 @@
 
 .header{
+    position: fixed;    /* ヘッダーを固定する */
+    top: 0;             /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* ヘッダーの横幅を指定する */
+    height: 100px;       /* ヘッダーの高さを指定する */
+    padding: 10px;      /* ヘッダーの余白を指定する(上下左右) */
+    color: #000000;     /* フォントの色を指定する */
     background-color: #4DB7EB;
-    height: 100px;
 }
 
 .header-logo{
@@ -10,23 +16,50 @@
     font-size: 40px;
     color: #FBE545;
 }
+.border{
+    width: 100px;
+}
 
 .topic{
-    padding-left: 80px;
+    width: 200px;
+    padding-left: 100px;
+    padding-top: 20px;
     border-bottom: 1px solid #4DB7EB;
+    
+}
+
+.month{
+    padding-left: 90px;
+    border-bottom: 
+    1px solid #4DB7EB; 
     width: 200px;
 }
 
 .box{
+    position: absolute;
+    right: 90px;
+    top:200px;
     margin-left: auto;
-    width: 1400px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 1200px;
     height: 200px;
     border: 1px solid;
     
 }
 
+.box2{
+
+}
+
 
 .footer{
+    position: fixed;    /* フッターを固定する */
+    bottom: 0;          /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* フッターの横幅を指定する */
+    padding:10px;       /* フッター内側の余白を指定する(上下左右) */
+    color: #FFFFFF;     /* フッターのフォントの色を指定する */
     background-color: #4DB7EB;
     height: 100px;
 }

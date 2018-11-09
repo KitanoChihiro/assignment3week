@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,7 +17,7 @@
     </div>
 
     <div class="form">
-        <form action="" method="POST">
+        <form action="index.php" method="POST">
             <fieldset class="field">
                 <h2>title</h2>
                 <input type="text" class="text"><br>
@@ -19,12 +25,12 @@
                 <textarea class="textarea"></textarea>
                 <div class="submit">
                     <a href=""><input type="submit" class="btn" value="投稿！！" style="font-size: 15px;"></a>
-                    <a href="index.php"><input type="submit" class="btn" value="戻る" style="font-size: 15px;"></a>
+                    <input type="submit" class="btn" value="戻る" style="font-size: 15px;"></a>
                 </div>
-
             </fieldset>
         </form>
     </div>
+
 
 
 

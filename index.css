@@ -4,10 +4,10 @@
     top: 0;             /* 上部から配置の基準位置を決める */ 
     left: 0;            /* 左から配置の基準位置を決める */ 
     width: 100%;        /* ヘッダーの横幅を指定する */
-    height: 100px;       /* ヘッダーの高さを指定する */
+    height: 70px;       /* ヘッダーの高さを指定する */
     padding: 10px;      /* ヘッダーの余白を指定する(上下左右) */
     color: #000000;     /* フォントの色を指定する */
-    background-color: #4DB7EB;
+    background-color: #cc6699;
 }
 
 .header-logo{
@@ -24,32 +24,42 @@
     width: 200px;
     padding-left: 100px;
     padding-top: 20px;
-    border-bottom: 1px solid #4DB7EB;
+    border-bottom: 1px solid #cc6699;
     
 }
 
 .month{
     padding-left: 90px;
     border-bottom: 
-    1px solid #4DB7EB; 
+    1px solid #cc6699; 
     width: 200px;
+}
+
+.btn{
+    width: 20%;
 }
 
 .box{
     position: absolute;
-    right: 90px;
-    top:200px;
+    right: 95px;
+    top:100px;
     margin-left: auto;
     margin-bottom: 20px;
     margin-top: 20px;
     width: 1200px;
-    height: 200px;
+    height: 150px;
     border: 1px solid;
-    
 }
 
 .box2{
-
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 1200px;
+    height: 150px;
+    border: 1px solid;
+    position: relative;
+    right: 90px;
 }
 
 
@@ -60,8 +70,8 @@
     width: 100%;        /* フッターの横幅を指定する */
     padding:10px;       /* フッター内側の余白を指定する(上下左右) */
     color: #FFFFFF;     /* フッターのフォントの色を指定する */
-    background-color: #4DB7EB;
-    height: 100px;
+    background-color: #cc6699;
+    height: 40px;
 }
 
 .footer-logo{

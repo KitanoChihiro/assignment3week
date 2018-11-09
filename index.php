@@ -12,6 +12,10 @@
         $day = 'こんばんは、ゲストさん';
     }
     
+    $title = [''];
+    $contents = [''];
+    $created = [''];
+
     // データを５件入力するSQL
     $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
 
@@ -21,7 +25,21 @@
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
 
+    // // フェッチする
+    // $diary = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    //     //ダイアリーの一覧をいれる配列
+    $diaries = [];
+    // // // レコードがなくなるまで取得処理
+    while (true) {
+            // １件ずつフェッチ
+            // $record = $diary一件の情報
+        $record = $stmt->fetch(PDO::FETCH_ASSOC);
+        // レコードがなければ処理を抜ける
+        if ($record == false) {
+            break;
+        }
+    }
  ?>
 
 <!DOCTYPE html>
@@ -48,13 +66,15 @@
         </div>
 
         <div class="btn">
-            <form action="diary.php" method="POST"><button style="btn-danger">新規作成</button></form>
+            <form action="diary.php" method="POST"><button>新規作成</button></form>
         </div>
 
-        <div class="box">
-            <a href=""><p style="font-size: 35px; padding-left: 20px;">こんにちは</p></a>
-            <p style="padding-left: 20px;">2018年11月6日</p>
-        </div>
+        <?php foreach ($diaries as $diary): ?>
+            <div class="box">
+                <a href=""><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
+                <p style="padding-left: 20px;"><?php echo $diary['created']; ?></p>
+            </div>
+        <?php endforeach; ?>
 
         <div class="box2">
             <a href=""><p style="font-size: 35px; padding-left: 20px;">こんにちは</p></a>
@@ -71,11 +91,7 @@
             <p style="padding-left: 20px;">2018年11月6日</p>
         </div>
 
-
-        
         <br>
-
-
         <div class="footer">
             <div class="footer-logo">NexSeed</div>
         </div>

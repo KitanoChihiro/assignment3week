@@ -3,7 +3,7 @@
   // DBを操作する共通ファイル
 
   // Deta Source Name
-  $dsn = 'mysql:dbname=assignment_3_weeks;host=localhost';
+  $dsn = 'mysql:dbname=assingnment_3_weeks;host=localhost';
   // ユーザー名
   $user = 'root';
   // パスワード

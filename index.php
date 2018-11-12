@@ -14,19 +14,16 @@
     
     $title = [''];
     $contents = [''];
-    $created = [''];
+
 
     // データを５件入力するSQL
     $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
 
     // DBから登録した日記の情報を取得する
-    $sql = "SELECT `id`, `title`, `contents`, `created` FROM diaries ";
-    $data = [];
+    $sql = "SELECT `id`, `title`, `contents`, `created` FROM `diaries` WHERE 1 ORDER BY `diaries` . `created` DESC ";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
 
-    // // フェッチする
-    // $diary = $stmt->fetch(PDO::FETCH_ASSOC);
 
     //     //ダイアリーの一覧をいれる配列
     $diaries = [];
@@ -39,6 +36,7 @@
         if ($record == false) {
             break;
         }
+        $diaries[] = $record;
     }
  ?>
 
@@ -69,27 +67,14 @@
             <form action="diary.php" method="POST"><button>新規作成</button></form>
         </div>
 
+        
         <?php foreach ($diaries as $diary): ?>
-            <div class="box">
-                <a href=""><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
-                <p style="padding-left: 20px;"><?php echo $diary['created']; ?></p>
-            </div>
+        <div class="box2">
+            <a href=""><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
+            <p style="padding-left: 20px;"><?php echo $diary['created']; ?></p>
+        </div>
         <?php endforeach; ?>
 
-        <div class="box2">
-            <a href=""><p style="font-size: 35px; padding-left: 20px;">こんにちは</p></a>
-            <p style="padding-left: 20px;">2018年11月6日</p>
-        </div>
-
-        <div class="box2">
-            <a href=""><p style="font-size: 35px; padding-left: 20px;">こんにちは</p></a>
-            <p style="padding-left: 20px;">2018年11月6日</p>
-        </div>
-
-        <div class="box2">
-            <a href=""><p style="font-size: 35px; padding-left: 20px;">こんにちは</p></a>
-            <p style="padding-left: 20px;">2018年11月6日</p>
-        </div>
 
         <br>
         <div class="footer">

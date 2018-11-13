@@ -61,6 +61,14 @@
     right: 90px;
 }
 
+.btn-delete{
+    float: right;
+    margin-right: 15px;
+    position: relative;
+    bottom: 15px;
+    background-color: #ffc0cb;
+    padding: 10px;
+}
 
 .footer{
     position: fixed;    /* フッターを固定する */

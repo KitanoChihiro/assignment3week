@@ -71,7 +71,9 @@
         <?php foreach ($diaries as $diary): ?>
         <div class="box2">
             <a href=""><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
-            <p style="padding-left: 20px;"><?php echo $diary['created']; ?></p>
+            <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
+
+        <button class="btn-delete">DELETE</button>
         </div>
         <?php endforeach; ?>
 

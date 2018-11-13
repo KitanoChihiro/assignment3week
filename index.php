@@ -17,7 +17,7 @@
 
 
     // データを５件入力するSQL
-    $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
+    // $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
 
     // DBから登録した日記の情報を取得する
     $sql = "SELECT `id`, `title`, `contents`, `created` FROM `diaries` WHERE 1 ORDER BY `diaries` . `created` DESC ";
@@ -56,7 +56,7 @@
         <br>
         <br>
         <br>
-        <div style="width: 100px;">
+        <div class="category">
             <p class="topic"><?php echo $day ?></p>
             <a href=""><p class = "month" ><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("now")); ?></p></a>
             <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-1 month")); ?></p></a>

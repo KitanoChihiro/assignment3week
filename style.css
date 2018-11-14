@@ -1,0 +1,37 @@
+/*ヘッダー・フッター用のCSS*/
+
+.header{
+    position: fixed;    /* ヘッダーを固定する */
+    top: 0;             /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* ヘッダーの横幅を指定する */
+    height: 80px;       /* ヘッダーの高さを指定する */
+    padding: 10px;      /* ヘッダーの余白を指定する(上下左右) */
+    color: #000000;     /* フォントの色を指定する */
+    background-color: #cc6699;
+}
+
+.header-logo{
+    padding: 20px;
+    text-align:center;
+    font-size: 40px;
+    color: #FBE545;
+}
+
+
+.footer{
+    position: fixed;    /* フッターを固定する */
+    bottom: 0;          /* 上部から配置の基準位置を決める */ 
+    left: 0;            /* 左から配置の基準位置を決める */ 
+    width: 100%;        /* フッターの横幅を指定する */
+    padding:10px;       /* フッター内側の余白を指定する(上下左右) */
+    color: #FFFFFF;     /* フッターのフォントの色を指定する */
+    background-color: #cc6699;
+    height: 40px;
+}
+
+.footer-logo{
+    padding: 20px;
+    text-align:center;
+    color: #FBE545;
+}

@@ -45,7 +45,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Diary</title>
+    <title>EDIT</title>
     <link rel="stylesheet" href="diary.css">
 </head>
 <body>

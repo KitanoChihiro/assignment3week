@@ -1,12 +1,13 @@
 <?php 
     require_once('dbconnect.php');
     date_default_timezone_set('Asia/Tokyo');
-    $time = intval(date('H:i'));
+    // intval()はintを文字列型として表示してくれる
+    $time = intval(date('H'));
     $day = $time;
 
-    if ('06:00' <= $time && $time<= '11:00') {
+    if ('6' <= $time && $time<= '10') {
         $day = 'おはようございます、ゲストさん';
-    }elseif ('11:01' < $time && $time< '17:59') {
+    }elseif ('11' <= $time && $time<= '17') {
         $day = 'こんにちは、ゲストさん';
     }else{
         $day = 'こんばんは、ゲストさん';
@@ -46,6 +47,7 @@
         <meta charset="UTF-8">
         <title>NexSeed</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div class="header">
@@ -56,27 +58,30 @@
         <br>
         <br>
         <br>
-        <div class="category">
-            <p class="topic"><?php echo $day ?></p>
-            <a href=""><p class = "month" ><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("now")); ?></p></a>
-            <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-1 month")); ?></p></a>
-            <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-2 month")); ?></p></a>
-        </div>
+        <div class="side-box">
+        <!-- 月の計算 -->
+            <div class="category">
+                <p class="topic"><?php echo $day ?></p>
+                <a href=""><p class = "month" ><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("now")); ?></p></a>
+                <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-1 month")); ?></p></a>
+                <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-2 month")); ?></p></a>
+            </div>
 
-        <div class="btn">
-            <form action="diary.php" method="POST"><button>新規作成</button></form>
+            <div class="btn">
+                <form action="diary.php" method="POST"><button class="new-btn">新規作成</button></form>
+            </div>
         </div>
-
         
-        <?php foreach ($diaries as $diary): ?>
-        <div class="box2">
-            <a href=""><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
-            <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
+        <div class="main-box">
+            <?php foreach ($diaries as $diary): ?>
+            <div class="box2">
+                <a href="diary_view.php"><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
+                <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
 
-        <button class="btn-delete">DELETE</button>
+            <button class="btn-delete">DELETE</button>
+            </div>
+            <?php endforeach; ?>
         </div>
-        <?php endforeach; ?>
-
 
         <br>
         <div class="footer">

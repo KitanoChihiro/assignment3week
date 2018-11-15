@@ -42,10 +42,15 @@
     border: 1px #FBE545;
 }
 
+.btn-submit{
+    display: inline;
+}
 
 
 .btn{
     margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 350px;
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -64,6 +69,13 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
 }
 
+.submit{
+    list-style-type: none;
+    display: inline;
+}
+
+
+
 .btn:active{/*押したとき*/
     -ms-transform: translateY(2px);
     -webkit-transform: translateY(2px);
@@ -71,8 +83,40 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
     background-image: -webkit-linear-gradient(#fed6e3 0%, #ffbcbc 100%);
     background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);/*グラデーションを明るく*/
+
 }
 
+.btn-back{
+    display: inline;
+    margin-left: 20px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 390px;
+    text-decoration: none;
+    color: #000000;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#ffcc99 0%, #ffcc99 100%);
+    background-image: linear-gradient(#f09199 0%, #ffcc99 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
+.btn-back:active{/*押したとき*/
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);/*沈むように*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffbcbc 100%);
+    background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);/*グラデーションを明るく*/
+
+}
 
 
 .footer{

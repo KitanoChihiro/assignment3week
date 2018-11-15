@@ -61,8 +61,8 @@
                 <h2>diary</h2>
                 <textarea class="textarea" name="contents" placeholder="本文の入力"></textarea>
                 <ul class="submit">
-                    <a href="diary.php"><li><button type="submit" class="btn" value="post" style="font-size: 15px;">投稿！</button></li></a>
-                    <a href="index.php"><li type="submit" class="btn" value="" style="font-size: 15px;">戻る</li></a>
+                    <a href="diary.php"><li class="btn-submit"><button type="submit" class="btn" value="post" style="font-size: 15px;">投稿！</button></li></a>
+                    <a href="index.php"><li type="submit" class="btn-back" value="" style="font-size: 15px;">戻る</li></a>
                 </ul>
             </fieldset>
         </form>

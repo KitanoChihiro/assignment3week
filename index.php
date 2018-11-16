@@ -21,7 +21,7 @@
     // $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
 
     // DBから登録した日記の情報を取得する
-    $sql = "SELECT `id`, `title`, `contents`, `created` FROM `diaries` WHERE 1 ORDER BY `diaries` . `created` DESC ";
+    $sql = "SELECT * FROM `diaries` WHERE 1 ORDER BY `diaries` . `created` DESC ";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
 
@@ -48,6 +48,20 @@
         <title>NexSeed</title>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="function.js">
+        <script type="text/javascript">
+            function disp(){
+                // 『OK』の時処理開始＋確認ダイアログの表示
+                if(window.confirm('削除してもいいですか？')){
+                    location.href = "ingex.php"; // index.php へジャンプ
+                }  // ここまで、OKの時の処理
+                // ここからキャンセルの時の処理
+                else{
+                    window.alert('キャンセルしました'); // 警告ダイアログを表示
+                }
+                // キャンセル処理の終了
+            }
+        </script>
     </head>
     <body>
         <div class="header">
@@ -78,8 +92,9 @@
                 <a href="diary_view.php"><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
                 <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
 
-            <button class="btn-delete">DELETE</button>
+            <p><input type="button" value="DELETE" onClick="disp()" class="btn-delete"></p>
             </div>
+
             <?php endforeach; ?>
         </div>
 

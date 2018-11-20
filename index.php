@@ -13,12 +13,8 @@
         $day = 'こんばんは、ゲストさん';
     }
     
-    $title = [''];
-    $contents = [''];
-
-
-    // データを５件入力するSQL
-    // $sql = "INSERT INTO diaries(id, title, contens, created) VALUES (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?), (?,?,?,?)";
+    $title = [];
+    $contents = [];
 
     // DBから登録した日記の情報を取得する
     $sql = "SELECT * FROM `diaries` WHERE 1 ORDER BY `diaries` . `created` DESC ";
@@ -39,6 +35,17 @@
         }
         $diaries[] = $record;
     }
+
+    // DBからデータを消去する
+    if (isset($_GET['dlt_id'])) {
+        
+        $sql = "DELETE FROM `diaries` WHERE `id` = ?";
+        $data = [$_GET['dlt_id']];
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute($data);
+    }
+
+
  ?>
 
 <!DOCTYPE html>
@@ -53,7 +60,7 @@
             function disp(){
                 // 『OK』の時処理開始＋確認ダイアログの表示
                 if(window.confirm('削除してもいいですか？')){
-                    location.href = "ingex.php"; // index.php へジャンプ
+                    location.href = "index.php"; // index.php へジャンプ
                 }  // ここまで、OKの時の処理
                 // ここからキャンセルの時の処理
                 else{
@@ -82,19 +89,22 @@
             </div>
 
             <div class="btn">
-                <form action="diary.php" method="POST"><button class="new-btn">新規作成</button></form>
+                <form action="diary.php" method="POST">
+                    <button class="new-btn">新規作成</button>
+                </form>
             </div>
         </div>
         
         <div class="main-box">
             <?php foreach ($diaries as $diary): ?>
-            <div class="box2">
-                <a href="diary_view.php"><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
-                <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
-
-            <p><input type="button" value="DELETE" onClick="disp()" class="btn-delete"></p>
-            </div>
-
+                <div class="box2">
+                    <a href="diary_view.php?diary_id=<?php echo $diary['id']; ?>"><p style="font-size: 35px; padding-left: 20px;"><?php echo $diary['title']; ?></p></a>
+                    <span style="padding-left: 20px;"><?php echo $diary['created']; ?></span>
+                    <form action="" method="GET">
+                        <p><input type="submit" value="DELETE" onClick="disp()" class="btn-delete"></p>
+                        <input type="hidden" value="<?php echo $diary['id']; ?>" name="dlt_id">
+                    </form>
+                </div>
             <?php endforeach; ?>
         </div>
 

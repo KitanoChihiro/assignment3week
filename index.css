@@ -33,11 +33,11 @@
 
 .btn{
   display: block;
-  margin: 100px auto;
+  margin: 20px auto;
+  margin-left: 10px;
   padding: 10px 0;
   width: 140px;
   color: #fff;
-  background: #333;
   text-align: center;
   text-decoration: none;
 }

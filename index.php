@@ -38,11 +38,12 @@
 
     // DBからデータを消去する
     if (isset($_GET['dlt_id'])) {
-        
         $sql = "DELETE FROM `diaries` WHERE `id` = ?";
         $data = [$_GET['dlt_id']];
         $stmt = $dbh->prepare($sql);
         $stmt->execute($data);
+
+        header('Location: index.php');
     }
 
 

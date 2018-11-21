@@ -90,9 +90,7 @@
             </div>
 
             <div class="btn">
-                <form action="diary.php" method="POST">
-                    <button class="new-btn">新規作成</button>
-                </form>
+                <div class="new-btn"><a href="diary.php" class="button">New</a></div>
             </div>
         </div>
         

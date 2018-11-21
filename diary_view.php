@@ -68,25 +68,26 @@
                     <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-1 month")); ?></p></a>
                     <a href=""><p class="month"><?php echo date('Y' . '年' . 'm' . '月の日記', strtotime("-2 month")); ?></p></a>
                 </div>
+                <div class="bck-btn"><a href="index.php" class="button">Back</a></div>
         </div>
             
 
         <?php foreach ($diaries as $diary): ?>
             <div class="main-box">
                 <div>
-                    <div>
+                    <div> <!-- title用のdiv -->
                         Title
                         <div class="title" name='title' style="font-size: 20px;">
                             <?php echo $diary['title'];?>
-                        </div>
-                    </div>
+                        </div> 
+                    </div> <!-- title用のdiv -->
                     <br><br>
-                    <div>
+                    <div> <!-- diary用のdiv -->
                         Diary
                         <div class="diary" name='contents' style="font-size: 30px;">
                             <?php echo $diary['contents']; ?>
                         </div>
-                    </div>
+                    </div> <!-- diary用のdiv -->
                 </div>
             </div>
         <?php endforeach ?>

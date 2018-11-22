@@ -88,6 +88,16 @@
                             <?php echo $diary['contents']; ?>
                         </div>
                     </div> <!-- diary用のdiv -->
+
+                    <!-- コメント機能の作成 -->
+                        <a href="#collapseComment<?= $feed["id"] ?>" data-toggle="collapse" aria-expanded="false">
+                            <span>コメントする</span>
+                        </a>
+                        <span class="comment_count">コメント数 : 9</span>
+                        <br>
+                        <?php include('comment_view.php'); ?>
+                    <!-- ここまでコメント機能 -->
+
                 </div>
             </div>
         <?php endforeach ?>

@@ -41,6 +41,15 @@
     }
 
 
+        
+    // コメントの情報登録
+    $sql = "INSERT INTO `comments`(`id`, `comment`, `created`) VALUES (?,?, NOW())";
+    $data = [$id, $comment];
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute($data);
+
+
+
 
  ?>
 
